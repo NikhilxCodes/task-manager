@@ -60,7 +60,7 @@ Render's free tier doesn't include MongoDB, so we'll use MongoDB Atlas (free tie
    - **Branch**: `main`
    - **Root Directory**: `server` (important!)
    - **Runtime**: `Node`
-   - **Build Command**: `npm ci && npm run build`
+   - **Build Command**: `npm install --include=dev && npm run build`
    - **Start Command**: `npm start`
    - **Plan**: Free (or paid if you prefer)
 

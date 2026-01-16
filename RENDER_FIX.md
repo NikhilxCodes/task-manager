@@ -10,23 +10,23 @@ TypeScript build errors on Render because type definitions aren't found.
 In your Render dashboard, update the **Build Command** to:
 
 ```
-npm ci && npm run build
-```
-
-**Why `npm ci` instead of `npm install`?**
-- `npm ci` is faster and more reliable for CI/CD
-- It installs exact versions from package-lock.json
-- It installs devDependencies by default (needed for TypeScript build)
-
-### Alternative: If `npm ci` doesn't work
-
-Use this build command instead:
-
-```
 npm install --include=dev && npm run build
 ```
 
-This explicitly includes devDependencies.
+**Why this command?**
+- `--include=dev` explicitly installs devDependencies (needed for TypeScript types)
+- Ensures `@types/*` packages are available during build
+- Works reliably on Render's build environment
+
+### Alternative: If that doesn't work
+
+Try this build command:
+
+```
+NODE_ENV=development npm install && npm run build
+```
+
+This sets NODE_ENV to development which ensures devDependencies are installed.
 
 ## Steps to Fix
 
