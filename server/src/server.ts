@@ -24,6 +24,10 @@ app.get('/health', (req: express.Request, res: express.Response) => {
   res.json({ status: 'OK', message: 'Server is running' });
 });
 
+app.get("/", (req: express.Request, res: express.Response) => {
+  res.send("Task Manager API is running 🚀");
+});
+
 const connectDB = async () => {
   try {
     const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/taskmanager';
