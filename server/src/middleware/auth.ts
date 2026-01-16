@@ -8,7 +8,7 @@ const authMiddleware = async (
   next: NextFunction
 ): Promise<void> => {
   try {
-    const token = req.header('Authorization')?.replace('Bearer ', '');
+    const token = req.headers.authorization?.replace('Bearer ', '');
 
     if (!token) {
       res.status(401).json({ message: 'No token provided, authorization denied' });

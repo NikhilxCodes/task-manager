@@ -34,7 +34,7 @@ mongodb+srv://username:password@cluster.mongodb.net/taskmanager?retryWrites=true
 4. Configure:
    - **Name**: `task-manager-api`
    - **Root Directory**: `server` ⚠️ IMPORTANT
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm ci && npm run build`
    - **Start Command**: `npm start`
    - **Plan**: Free
 5. Add Environment Variables:
