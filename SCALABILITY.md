@@ -1,4 +1,4 @@
-# Scalability Plan: Scaling to 1 Million Users
+# Scalability Plan: Scaling to 1 Million Users in world
 
 This document outlines the architectural changes and strategies needed to scale the Task Manager application to handle 1 million concurrent users while maintaining performance, reliability, and user experience.
 
